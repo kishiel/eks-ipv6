@@ -388,6 +388,7 @@ describe('IAM role', () => {
     });
   });
 
+<<<<<<< HEAD
   test('a role cannot grant AssumeRole permission to a Service Principal', () => {
     // GIVEN
     const stack = new Stack();
@@ -418,6 +419,8 @@ describe('IAM role', () => {
       .toThrow('Cannot use a service or account principal with grantAssumeRole, use assumeRolePolicy instead.');
   });
 
+=======
+>>>>>>> parent of 93c4e4fb02 (grantAssume errors when a service principal is used)
   testDeprecated('can supply externalId', () => {
     // GIVEN
     const stack = new Stack();

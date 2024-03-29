@@ -594,10 +594,13 @@ export class Role extends Resource implements IRole {
    * Grant permissions to the given principal to assume this role.
    */
   public grantAssumeRole(identity: IPrincipal) {
+<<<<<<< HEAD
     // Service and account principals must use assumeRolePolicy
     if (identity instanceof ServicePrincipal || identity instanceof AccountPrincipal) {
       throw new Error('Cannot use a service or account principal with grantAssumeRole, use assumeRolePolicy instead.');
     }
+=======
+>>>>>>> parent of 93c4e4fb02 (grantAssume errors when a service principal is used)
     return this.grant(identity, 'sts:AssumeRole');
   }
 
